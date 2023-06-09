@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0426 복습</title>
+</head>
+<style>
+    /* 애니메이션 */
+    /* (속성값을 이동/전환하는 트랜지션과 달리) 수행할 동작들을 애진작에 묶어서 정의 */
+    div{
+        width:200px;
+        height:200px;
+        border: 3px solid black;
+        background-color:darkseagreen;
+
+        /* 애니메이션 적용 */
+        animation-name: dynamic;
+        animation-duration: 10s;
+
+        /* 애니메이션 추가 속성 */
+        animation-iteration-count: infinite;   /* 반복 횟수 */
+        animation-delay: none;    /* 태그의 기본값 보여주는 시간(애니메이션 적용X) */
+    }
+
+    /* 애니메이션 정의 부분 */
+    @keyframes change{
+        from{   /* 시작 상태의 속성값 */
+            width:400px;
+            height:400px;
+            background-color:crimson;
+            border: none;
+        } 
+        to{     /* 끝 상태의 속성값 */
+            width:200px;
+            height:200px;
+            background-color:darkseagreen;
+            border:3px solid black;
+        }    
+        /* 
+        애니메이션의 끝부분 속성값이랑 애니메이션 적용하고자 하는 태그의 기본값이랑
+        속성값이 동일해야 자연스럽게 됨
+        */
+    }
+
+    @keyframes dynamic{
+        0%{width:200px; height:200px;}      /* 작은 정사각형 */
+        25%{width:200px;    height:400px;}  /* 세로로 긴 직사각형*/
+        50%{width:400px;    height:400px;}  /* 큰 정사각형 */
+        75%{width:400px;    height:200px;}  /* 가로로 긴 직사각형 */
+        100%{width:200px; height:200px;}    /* 작은 정사각형 */
+    }
+
+    /* 반응형 웹 */
+</style>
+<body>
+    <div>
+        <p>사각형</p>
+    </div>
+</body>
+</html>

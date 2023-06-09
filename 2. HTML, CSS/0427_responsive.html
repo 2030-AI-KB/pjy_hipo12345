@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 뷰포트 메타 태그 :: "반응형 웹"을 만들 때 필요한 태그 -->
+    <!-- 뷰포트 :: 브라우저 창의 영역/크기-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹</title>
+</head>
+<style>
+    /* width, height, max-width, max-height, min-width, min-height */
+    /* max-width/height :: "max값에 한계를 가진" 너비 및 높이값 설정 */
+        /* 최대값은 width나 heigth로 지정된 값이나 원본 사진의 너비 및 높이를 따른다. */
+    /* min-width/height :: "min값에 한계를 가진" 너비 및 높이값 설정 */
+        /* 최소값은 width나 heigth로 지정된 값이나 원본 사진의 너비 및 높이를 따른다. */
+    img{
+        max-width:70%;
+        width:800px;    /* 이미지 너비의 한계를 800px로 설정한다. */
+        /* min-width:50%; */
+    }
+</style>
+<body>
+    <!-- 뷰포트의 크기에 따라 글자 사이즈를 다르게 하고 싶다면? 
+        vw(viewport width) 사용 -->
+    <!-- <label style="font-size:5vw">p 태그입니다.</label> -->
+
+    <p style="font-size:30px">늘렸다 줄였다 해보세요</p>
+    <picture>
+        <!-- srcset, media 속성 -->
+        <source srcset="http://newsimg.hankookilbo.com/2016/04/13/201604131460701467_1.jpg"
+            media="(max-width:600px)">  <!-- 뷰포트 너비가 600 이하일때 보여준다. -->
+        <source srcset="https://ichef.bbci.co.uk/news/800/cpsprodpb/E172/production/_126241775_getty_cats.png"
+            media="(max-width:1200px)">
+        <source srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtEMUl%2FbtrDc6957nj%2FNwJoDw0EOapJNDSNRNZK8K%2Fimg.jpg"
+            >
+        <img>       <!-- 이미지 공간 배정만 하는 용도 -->
+    </picture>
+    <br>
+</body>
+</html> 

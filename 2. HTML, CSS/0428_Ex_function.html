@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 예제</title>
+</head>
+<body>
+    <script>
+        // 입력문을 통해, 아래의 정보(이름, 나이, 성별)를 입력받기 (배열로 입력받기)
+        let introduce=[];   // 배열 선언
+        for(let i=0;i<3;i++){   // 입력 부분
+            switch(i){
+                case 0:
+                    let input1=prompt("이름을 입력하세요.", "(ex)홍길동");   // 이름 입력
+                    introduce.push(input1);  // 이름값 배열에 삽입
+                    break;
+                case 1:
+                    let input2=prompt("나이를 입력하세요.", 0);     // 나이 입력
+                    input2=Number(input2);  // string->number 형변환
+                    introduce.push(input2); // 나이값 배열에 삽입
+                    break;
+                default:
+                    let input3=confirm("여성이십니까? 맞다면, 확인을 눌러주세요.");
+                    introduce.push(input3);
+                    // input3값은 확인을 누르면 true, 취소를 누르면 false
+            }
+        }
+
+        // 사용자의 정보를 모두 출력하고, 대상자인지에 대한 여부 출력하기
+        document.write("이름: "+introduce[0]+"<br>");
+        document.write("나이: "+introduce[1]+"<br>");
+        document.write("성별: "+(introduce[2]===true?"여성":"남성")+"<br><br>");
+
+        if(Women2030(introduce[1], introduce[2])===true){   // 대상자인 경우
+            document.write("환영합니다!<br>2030 여성지원 과정에 지원 가능하십니다!");
+        }
+        else{       // 대상자가 아닌 경우
+            document.write("아쉽게도 2030 여성지원 과정의 대상자가 아니십니다.");
+        }
+
+        // 2030 여성지원 과정에 참여O 대상자인지 판단하는 함수 구현
+        function Women2030(age, gender){    // 함수 실행시, 나이와 성별의 정보 받도록 한다.
+            // 대상자는 20대, 30대 여성이어야한다.
+            // age의 자료형: number, gender의 자료형: boolean
+            if(age>=20 && age<40 && gender===true){
+                return true;    // 대상자인 경우
+            }
+            else{
+                return false;   // 대상자가 아닌 경우
+            }
+        }
+    </script>
+</body>
+</html>

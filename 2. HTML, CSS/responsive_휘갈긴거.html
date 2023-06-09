@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 반응형 웹 설계 시, 뷰 포트 명시된 meta 태그 포함시켜야 함-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web</title>
+
+    <!-- 뷰포트 :: 브라우저 창의 크기-->
+</head>
+<style>
+    img, source{
+        /* width, height, max-width, min-width, max-height, min-height */
+        /* width:70%; */
+            /* img 태그의 너비를, 뷰포트 너비의 70%만큼 차지하게끔 하라.(한도X) */
+        max-width:70%;
+            /* img 태그의 너비를, 뷰포트 너비의 70%만큼 차지하게끔 하라. */
+            /* 원본 사진의 크기가 최대이다. */
+        /* min-width:60%; */
+            /* img 태그의 너비를, 뷰포트 너비의 60%만큼 차지하게끔 하라. */
+            /* 원본 사진의 크기가 최소이다. */
+    }
+</style>
+<body>
+    <!-- <img src="https://st4.depositphotos.com/1007995/38992/i/600/depositphotos_389920230-stock-photo-sleepy-labrador-retriever-puppy-laying.jpg"> -->
+
+    <!-- 뷰포트 크기에 따라, 다른 사진을 보여주게끔 설정 -->
+    <picture>
+        <!-- srcset 속성 :: 이미지들을 2개 이상 명시하여 "묶어놓는" 속성 -->
+        <source srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99697D3D5C7D083716"
+            media="(max-width: 800px)" style="width:200px; height:600px;">
+        <source srcset="https://media.npr.org/assets/img/2019/09/26/gettyimages-542502429-27867461d697a947417e7f8760b72b1c96880582-s800-c85.webp"
+            media="(max-width: 1500px)" style="width:800px; height:800px;">
+        <source srcset="https://blog.kakaocdn.net/dn/tEMUl/btrDc6957nj/NwJoDw0EOapJNDSNRNZK8K/img.jpg"
+            >
+        <img src="https://media.npr.org/assets/img/2019/09/26/gettyimages-542502429-27867461d697a947417e7f8760b72b1c96880582-s800-c85.webp">
+    </picture>
+    <!-- vw 단위 :: 뷰포트 너비 -->
+    <h1 style="font-size:5vw">화면을 줄여보세요.</h1>
+</body>
+</html>

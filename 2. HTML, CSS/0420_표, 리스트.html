@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>표와 리스트</title>
+</head>
+<style>
+    /* table, th, td 태그에 대해서 아래의 스타일을 동시에 적용하라. */
+    table, th, td{
+        border: 1px solid white;
+        border-collapse:collapse;   /* 중복되는 선을 하나로 해주는 역할*/
+        margin:50px;
+    }
+    th,td{
+        background-color:moccasin;
+        text-align:center;
+        padding:10px;
+        /* padding :: 경계선과 내용물 간의 간격 */
+        /* margin :: 경계선과 외부 간의 유지되는 간격 */
+    }
+</style>
+<body>
+    <!-- 표 만들기 :: <table> -->
+    <p>인적사항</p>
+    <!-- 너비 및 높이, 사이즈를 지정하는 스타일에서-->
+    <!-- x는 고정적인 크기, %는 비율에 대한 크기로 지정된다.-->
+    <table style="width:70%">
+        <!-- tr 태그 :: 행의 역할을 수행, tr 태그 안에는 th 태그, td 태그만 넣음-->
+        <!-- th 태그 :: 열의 역할을 수행, (head)데이터에 대한 카테고리 명시-->
+        <!-- td 태그 :: 열의 역할을 수행, (data)th 카테고리에 대한 데이터-->
+        <tr>
+            <th>이름</th>
+            <th>성별</th>
+            <th>나이</th>
+        </tr>
+        <tr>
+            <td>이유나</td>
+            <td>여자</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>김홍근</td>
+            <td>남자</td>
+            <td>XX</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- 목록 태그 3가지-->
+    <!-- 정렬되지 않은 목록(unordered list) :: <ul>, <li> -->
+    <p>음료수 종류</p>
+    <ul>       <!-- ul :: 정렬X 목록임을 선언-->
+        <li>Coffee</li>     <!-- li :: 리스트의 요소 추가-->
+        <li>Vitamin Drink</li>
+        <li>Banana milk</li>
+    </ul>
+    <br>
+
+    <!-- 정렬된 목록(ordered list) :: <ol>, <li> -->
+    <p>좋아하는 음료수 순위</p>
+    <ol>        <!-- ol :: 정렬된 목록임을 선언-->
+        <li>Americano</li>
+        <li>Latte</li>
+        <li>milk</li>
+    </ol>
+    <br>
+
+    <!-- 설명 목록(detailed list) :: <dl>, <dt>, <dd> -->
+    <p>이 음료를 좋아하는 이유</p>
+    <dl>
+        <dt>Americano</dt>   <!-- 리스트 요소 추가-->
+        <dd>좋아한다기보다는, 없으면 안됌</dd>   <!-- 해당 요소의 설명 추가-->
+        <dt>Latte</dt>
+        <dd>아메 먹기 싫을 때 대체품</dd>
+        <dt>milk</dt>
+        <dd>자기 전에 먹어야됌, 그래야 잘 잠</dd>
+    </dl>
+</body>
+</html>

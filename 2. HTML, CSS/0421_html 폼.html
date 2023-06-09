@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- html 폼 :: 사용자의 입력을 유도하는 데에 사용 -->
+    <form>  <!-- html 양식 작성할 때 사용-->
+        <!-- 텍스트 입력 폼 :: <label>, <input> -->
+        <!-- input type :: text, submit, radio, checkbox-->
+
+        <label for="name">이름: </label>      <!-- label 태그를 통해 입력할 내용 제시-->
+            <!-- "name의 값을 받기 위해 만들어둔 label 태그"-->
+        <!-- <input type="text" id="name" name="name" value="이름을 입력하세요.">  -->
+        <input type="text" id="name" name="name">     <!-- input 태그 통해서 사용자 입력을 수행하게끔 함-->
+        <!-- input의 id값과 label의 for값을 참조하며, 쌍을 이룬다. -->
+
+        <br>
+        <label for="gender">성별: </label>
+        <!-- name이 동일한 radio 타입의 input 중 하나만 선택하게끔 한다-->
+        <!-- 동일한 name으로 지정된 카테고리에서 선택된 한가지의 value로 값이 설정-->
+        <form>
+            <input type="radio" name="gender" value="male">
+            <label for="male">남성</label>
+            <input type="radio" name="gender" value="female">
+            <label for="female">여성</label>
+            <input type="radio" name="gender" value="etc">
+            <label for="etc">기타</label>
+        </form>
+        <br>
+
+        <label>가입경로: </label>
+        <!-- -->
+        <form>
+            <input type="checkbox" name="signup" value="visit">
+            <label for="visit">기관 방문</label>
+            <input type="checkbox" name="signup" value="banner">
+            <label for="banner">현수막</label>
+            <input type="checkbox" name="signup" value="tel">
+            <label for="tel">전화</label>
+            <input type="checkbox" name="signup" value="recommand">
+            <label for="recommand">지인 추천</label>
+        </form>
+
+        <!-- textarea 태그-->
+        <p>나의 각오: </p>
+        <textarea name="fighting" rows="4" cols="50"></textarea>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

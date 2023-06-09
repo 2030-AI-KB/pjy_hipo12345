@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Hello HTML</title>
+</head>
+<style>
+    h1{     /* 모든 h1 태그에 적용하는 스타일 */
+        color:salmon;
+        background-color:antiquewhite;
+        text-align:center;
+        padding:20px;
+    }
+    h3{
+        background-color:antiquewhite;
+        padding:5px;
+    }
+    li{
+        padding:3px;
+    }
+    table{
+        width:70%;
+        background-color:white;
+        border:3px solid black;
+    }
+    th{
+        border:1px solid black;
+    }
+</style>
+<body style="background-image: url('http://www.matcl.com/files/attach/images/2791205/785/837/002/0bfaea6b3b2595d1f6dbd2cde9112fed.jpg')">
+    <h1><b>Hello World</b></h1>
+    <br>
+    <h3>내 정보</h3>
+    <p>
+        <ul style="background-color:white">
+            <li>이름: 이유나</li>
+            <li>성별: 여자</li>
+            <li>나이: 25</li>
+            <li>직업: 교사</li>
+            <li>소속: <a href="http://kb.or.kr/">KB (경북산업직업전문학교)</a></li>
+            <li>
+                좋아하는 것
+                <dl>
+                    <dt>커피(Coffee)</dt>
+                    <dd>(코멘트) "카페인이 세상을 지배한다"</dd>
+                    <dt>초밥 (Sushi)</dt>
+                    <dd>(코멘트) "연어 가격 언제 내려가려나.."</dd>
+                    <dt>백준 (Beakjoon)</dt>
+                    <dd>(코멘트) "본인도 스스로를 이해하지 못하는 중"</dd>
+                </dl>
+            </li>
+            <li>
+                프로필 사진<br>
+                <img src="https://upload2.inven.co.kr/upload/2019/09/28/bbs/i15787212791.jpg?MW=800" width="300" height="300">
+            </li>
+        </ul>
+        <br>
+
+        <h3>일정</h3>
+        <table>
+            <tr>        <!-- tr 태그 :: 행을 구성하는 태그-->
+                <th>우선순위</th>       <!-- th 태그 :: 열을 구성, 카테고리를 표현-->
+                <th>마감기한</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>5</td>   <!-- td 태그 :: 열을 구성, 데이터를 표현-->
+                <td>4/21</td>
+                <td>숙면</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>항상</td>
+                <td>수업 준비</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>항상</td>
+                <td>백준 1문제씩 풀기</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4/23</td>
+                <td>가계부 작성</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>4/28</td>
+                <td>저녁 약속</td>
+            </tr>
+        </table>
+        <br>
+
+        <h1><b>Goodbye World</b></h1>
+    </p>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 합격 여부</title>
+</head>
+<body>
+    <script>
+        // 한 응시자의 정보처리기사 시험의 점수에 대하여, 합격 여부를 확인해보자.
+        // 객체 생성 :: 각 과목 성적(배열로 설정), good 변수
+        let data={
+            score: [],  // score 필드가 배열인 것만 선언 (어차피 입력받으니까)
+            good: 0,
+
+            Print: function(){   // Print 함수 :: 모든 점수 출력
+                for(let i=0;i<5;i++){
+                    document.write(`${i+1}과목 점수: ${this.score[i]}<br>`);
+                }
+                document.write("<hr>")
+            },
+            Sum: function(){    // 평균이 80점 이상이라면 good값에 1 더하기  
+                // 총 점수의 합계 구하기
+                let sum=0;
+                for(let i=0;i<5;i++){
+                    sum+=this.score[i];
+                }
+
+                // 합계에 대해서 비교하기
+                document.write(`최종 점수: ${sum/5}<br>`);
+                if(sum/5>=80){
+                    this.good++;
+                }
+            },
+            Subject_score: function(sc){
+                // sc값이 60점 이상이라면, good값에 1 더하기
+                if(sc>=60){
+                    this.good++;
+                }
+            }
+        }
+
+        // data의 score 배열 입력 :: 응시자 점수 입력
+        for(let i=0;i<5;i++){
+            data.score[i]=Number(prompt(`${i+1}과목 점수를 작성해주세요.`));    // 리터럴 작성법
+        }
+
+        data.Print();   // 모든 점수 출력
+
+        // 합격 여부 판단 :: 과락 여부 + 총점 충족 여부
+        for(let i=0;i<5;i++){   
+            // data의 모든 score 값에 대한 과락 여부 하나씩 따져볼 것 
+            data.Subject_score(data.score[i]);
+        }
+        data.Sum();
+
+        // good 값이 6 이상이라면 합격, 아니라면 불합격
+        if(data.good===6){   // 과락 없고, 총점 80점 이상일 때 = good값이 6일 때
+            document.write("축하합니다, 합격하셨습니다!");
+        }
+        else{
+            document.write("불합격하셨습니다.");
+        }
+    </script>
+</body>
+</html>

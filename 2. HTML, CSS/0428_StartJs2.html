@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 Basic2</title>
+</head>
+<body>
+    <script>
+        // 배열 :: 여러 값을 갖는 공간 (자바와는 달리, 모두 같은 타입의 정보일 필요X)
+        // 1. let/const 배열명 = [배열값1, 배열값2, ...];
+        let introduce1=["이유나", 25, "Female", 'A', true];  /* 배열 선언과 동시에 초기화 */
+        // 2. let/const 배열명 = Array(배열값1, 배열값2, ...);
+        let introduce2=Array("이유나", 25, "Female", 'A', true);
+        // 3. let/const 배열명 = new Array(배열값1, 배열값2, ...);
+        let introduce3=new Array("이유나", 25, "Female", 'A', true);
+        document.write("이름: "+introduce1[0]+"<br>");
+        document.write("나이: "+introduce1[1]+"<br>");
+        document.write("성별: "+introduce1[2]+"<br>");
+        document.write("혈액형: "+introduce1[3]+"<br>");
+
+        let student=[];         /* 배열 선언만 하고, 값은 아무것도 없는 상태 */
+        // 값 삽입
+        // 1. 배열명[값을 넣을 인덱스] = 추가할 값;
+        // ex) 제일 끝부분에 정보 추가할 시, 배열명[배열명.length]=추가할 값
+        student[0]="이유나";
+        // 2. 배열명.push(추가할 요소);
+        student.push(25);
+        document.write(student[0]+"<br>"); /* 실질적인 값이 없을 때에는, undefined 반환 */
+
+        // 값 삭제
+        // delete 배열명[삭제하고자 하는 정보의 인덱스];
+        delete student[0]
+        document.write(student[0]+"<br>");
+
+        // 함수(function) :: 명령문들의 집합
+        // function 함수명(매개변수명, ...){    -> 전달받는 값에 따라 타입이 변함
+        //     실행할 명령문
+        // }
+
+
+        console.log("5+6의 결과: "+add(5,6));  
+            // add(5,6)을 실행하면, 11 반환 (x, y의 타입 :: number)
+        console.log("Hello+World의 결과: "+add("Hello", "World"));
+            // add("Hello","World")을 실행하면, "HelloWorld" 반환 (x, y의 타입 :: string)
+    
+        // 함수 선언은 어디에서 해도 에러 발생X -> 필요할 때 그 즉시 생성해도 별 문제X
+        function add(x,y){
+            return x+y;
+        }
+    </script>
+</body>
+</html>
